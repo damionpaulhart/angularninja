@@ -1,7 +1,9 @@
-<body ng-init="salary=0;percentage=0">
+<body ng-controller="FinanceController">
 Your Salary?
 <input type="text" ng-model="salary">
 <br/>How much should you invest in gadgets?
 <input type="text" ng-model="percentage">%
 <br/>The amount to be spent in shopping will be:
-<span>{{salary*percentage*0.01}}</span>
+<span>{{result() | currency}}</span>
+<br/>Leaving:
+<span>{{remain() | currency}}</span>
